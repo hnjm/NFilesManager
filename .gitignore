@@ -4,3 +4,5 @@
 
 /obj/Debug
 /.vs/NFilesManager/v15
+/packages
+/Tests/obj/Debug
