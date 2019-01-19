@@ -28,6 +28,7 @@ namespace NFilesManager.Code.Models
         /// -
         /// </summary>
         /// 
+        public string Path { get; set; }
 
         //--События-------------------------------------
         // --

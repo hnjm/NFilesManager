@@ -48,7 +48,12 @@ namespace NFilesManager.Code.Services
         /// </summary>
         /// 
         public TaskScan CreateTask(string Path) {
-            throw new NotImplementedException();
+            // Задача сканирования.
+            TaskScan _TaskScan = new TaskScan();
+            // Создаем задачу.
+            _TaskScan = new TaskScan();
+            // Результат.
+            return _TaskScan;
         }
 
     }
