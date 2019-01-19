@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFilesManager", "NFilesManager.csproj", "{8A821B0F-4058-46B5-B110-727E07378AFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFilesManagerTests", "Tests\NFilesManagerTests.csproj", "{72EB4DAE-16D0-46B4-BA79-91244B110B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFilesManagerTests", "Tests\NFilesManagerTests.csproj", "{1FEB2E42-F5F1-485E-8892-7DEF3C00B939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8A821B0F-4058-46B5-B110-727E07378AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A821B0F-4058-46B5-B110-727E07378AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A821B0F-4058-46B5-B110-727E07378AFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72EB4DAE-16D0-46B4-BA79-91244B110B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72EB4DAE-16D0-46B4-BA79-91244B110B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72EB4DAE-16D0-46B4-BA79-91244B110B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72EB4DAE-16D0-46B4-BA79-91244B110B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FEB2E42-F5F1-485E-8892-7DEF3C00B939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FEB2E42-F5F1-485E-8892-7DEF3C00B939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FEB2E42-F5F1-485E-8892-7DEF3C00B939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FEB2E42-F5F1-485E-8892-7DEF3C00B939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
