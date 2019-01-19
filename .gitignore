@@ -6,3 +6,8 @@
 /.vs/NFilesManager/v15
 /packages
 /Tests/obj/Debug
+/obj/Release
+/.vs
+/bin/Debug
+/MigrationBackup/9b5a6229/NFilesManagerTests
+/Tests/bin/Debug
