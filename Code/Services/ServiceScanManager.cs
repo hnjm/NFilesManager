@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace NFilesManager.Code.Services
 {
@@ -46,14 +47,29 @@ namespace NFilesManager.Code.Services
         /// <summary>
         /// Создать задачу сканирования.
         /// </summary>
-        /// 
-        public TaskScan CreateTask(string Path) {
+        public TaskScanModel CreateTask(string Path)
+        {
             // Задача сканирования.
-            TaskScan _TaskScan = new TaskScan();
+            TaskScanModel _TaskScan = new TaskScanModel();
             // Создаем задачу.
-            _TaskScan = new TaskScan();
+            _TaskScan = new TaskScanModel()
+            {
+                Path = Path
+            };
             // Результат.
             return _TaskScan;
+        }
+        /// <summary>
+        /// Сканировать папки.
+        /// </summary>
+        public void ScanFolders(TaskScanModel Task)
+        {
+            // Список папок.
+            foreach (string _FolderPath in Directory.GetDirectories(Task.Path))
+            {
+                // Информация о директории.
+                DirectoryInfo _DI = new DirectoryInfo(_FolderPath);
+            }
         }
 
     }

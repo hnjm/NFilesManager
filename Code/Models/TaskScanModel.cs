@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace NFilesManager.Code.Models
 {
     /// <summary>
     /// Задача сканирования.
     /// </summary>
-    public class TaskScan
+    public class TaskScanModel
     {
         //--Конструкторы/инициализаторы-----------------
         // --
@@ -25,10 +26,13 @@ namespace NFilesManager.Code.Models
         //----------------------------------------------
 
         /// <summary>
-        /// -
+        /// Путь сканирования.
         /// </summary>
-        /// 
         public string Path { get; set; }
+        /// <summary>
+        /// Директориии.
+        /// </summary>
+        public DirectoryInfo[] Directories { get; set; }
 
         //--События-------------------------------------
         // --
@@ -47,7 +51,6 @@ namespace NFilesManager.Code.Models
         /// -
         /// </summary>
         /// 
-
 
     }
 }

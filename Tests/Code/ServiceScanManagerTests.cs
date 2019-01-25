@@ -10,7 +10,7 @@ namespace NFilesManager.Code.Services.Tests
     [TestFixture()]
     public class ServiceScanManagerTests
     {
-        [Test()]
+        [Test(Description = "Инициализация.")]
         public void ServiceScanManagerTest()
         {
             // Prepare
@@ -19,7 +19,7 @@ namespace NFilesManager.Code.Services.Tests
             // Assert
             Assert.NotNull(_ServiceScanManager);
         }
-        [Test()]
+        [Test(Description = "Инициализация.")]
         public void CreateTaskTest()
         {
             // Prepare
