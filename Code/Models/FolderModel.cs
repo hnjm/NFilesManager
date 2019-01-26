@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace NFilesManager.Code.Models
 {
@@ -21,6 +22,8 @@ namespace NFilesManager.Code.Models
         public FolderModel(string Path)
         {
             Childs = new List<FolderModel>();
+            this.Path = Path;
+            Info = new DirectoryInfo(Path);
         }
 
         //--Свойства------------------------------------
@@ -30,9 +33,13 @@ namespace NFilesManager.Code.Models
         /// <summary>
         /// Путь.
         /// </summary>
-        public string Path { get; set; }
+        public string Path { get; private set; }
         /// <summary>
-        /// -
+        /// Системная информация.
+        /// </summary>
+        public DirectoryInfo Info { get; private set; }
+        /// <summary>
+        /// Подчиненные.
         /// </summary>
         public List<FolderModel> Childs { get; set; }
 
