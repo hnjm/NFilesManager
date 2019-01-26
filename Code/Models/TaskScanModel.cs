@@ -19,7 +19,10 @@ namespace NFilesManager.Code.Models
         /// <summary>
         /// -
         /// </summary>
-        /// 
+        public TaskScanModel()
+        {
+            // -
+        }
 
         //--Свойства------------------------------------
         // --
@@ -32,7 +35,7 @@ namespace NFilesManager.Code.Models
         /// <summary>
         /// Директориии.
         /// </summary>
-        public DirectoryInfo[] Directories { get; set; }
+        public FolderModel Folder { get; set; }
 
         //--События-------------------------------------
         // --

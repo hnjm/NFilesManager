@@ -65,11 +65,7 @@ namespace NFilesManager.Code.Services
         public void ScanFolders(TaskScanModel Task)
         {
             // Список папок.
-            foreach (string _FolderPath in Directory.GetDirectories(Task.Path))
-            {
-                // Информация о директории.
-                DirectoryInfo _DI = new DirectoryInfo(_FolderPath);
-            }
+            Task.Folder = new FolderModel(Task.Path);
         }
 
     }
