@@ -19,10 +19,12 @@ namespace NFilesManager.Code.Models
         /// <summary>
         /// -
         /// </summary>
-        public TaskScanModel()
+        public TaskScanModel(string Path)
         {
-            // -
+            this.Path = Path;
+            Folder = new FolderModel(Path);
         }
+
 
         //--Свойства------------------------------------
         // --
@@ -31,11 +33,12 @@ namespace NFilesManager.Code.Models
         /// <summary>
         /// Путь сканирования.
         /// </summary>
-        public string Path { get; set; }
+        public string Path { get; }
         /// <summary>
         /// Директориии.
         /// </summary>
         public FolderModel Folder { get; set; }
+
 
         //--События-------------------------------------
         // --
@@ -46,6 +49,7 @@ namespace NFilesManager.Code.Models
         /// </summary>
         /// 
 
+
         //--Методы--------------------------------------
         // --
         //----------------------------------------------
@@ -54,6 +58,7 @@ namespace NFilesManager.Code.Models
         /// -
         /// </summary>
         /// 
+
 
     }
 }

@@ -21,7 +21,8 @@ namespace NFilesManager.Code.Models
         /// </summary>
         public FolderModel(string Path)
         {
-            Childs = new List<FolderModel>();
+            Files = new List<FileInfo>();
+            ChildFolders = new List<FolderModel>();
             this.Path = Path;
             Info = new DirectoryInfo(Path);
         }
@@ -39,9 +40,33 @@ namespace NFilesManager.Code.Models
         /// </summary>
         public DirectoryInfo Info { get; private set; }
         /// <summary>
-        /// Подчиненные.
+        /// Подчиненные каталоги.
         /// </summary>
-        public List<FolderModel> Childs { get; set; }
+        public List<FolderModel> ChildFolders { get; }
+        /// <summary>
+        /// Файлы.
+        /// </summary>
+        public List<FileInfo> Files { get; }
+        /// <summary>
+        /// Количество всех подчиненных каталогов.
+        /// </summary>
+        public int CountChildFoldersAll {
+            get {
+                int _CountCurrend = ChildFolders.Count();
+                int _CountInChilds = ChildFolders.Sum(x => x.CountChildFoldersAll);
+                return _CountCurrend + _CountInChilds;
+            }
+        }
+        /// <summary>
+        /// Количество всех файлов включая подкаталоги.
+        /// </summary>
+        public int CountFilesAll {
+            get {
+                int _CountCurrend = Files.Count();
+                int _CountInChilds = ChildFolders.Sum(x => x.CountFilesAll);
+                return _CountCurrend + _CountInChilds;
+            }
+        }
 
         //--События-------------------------------------
         // --

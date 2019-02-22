@@ -13,6 +13,8 @@ namespace NFilesManager.Code.Services
     /// </summary>
     public class ServiceScanManager
     {
+
+
         //--Конструкторы/инициализаторы-----------------
         // --
         //----------------------------------------------
@@ -22,6 +24,7 @@ namespace NFilesManager.Code.Services
         /// </summary>
         /// 
 
+
         //--Свойства------------------------------------
         // --
         //----------------------------------------------
@@ -29,7 +32,7 @@ namespace NFilesManager.Code.Services
         /// <summary>
         /// --
         /// </summary>
-        /// 
+        
 
         //--События-------------------------------------
         // --
@@ -40,6 +43,7 @@ namespace NFilesManager.Code.Services
         /// </summary>
         /// 
 
+
         //--Методы--------------------------------------
         // --
         //----------------------------------------------
@@ -47,25 +51,39 @@ namespace NFilesManager.Code.Services
         /// <summary>
         /// Создать задачу сканирования.
         /// </summary>
-        public TaskScanModel CreateTask(string Path)
+        public virtual TaskScanModel CreateTask(string Path)
         {
             // Задача сканирования.
-            TaskScanModel _TaskScan = new TaskScanModel();
+            TaskScanModel _TaskScan;
             // Создаем задачу.
-            _TaskScan = new TaskScanModel()
-            {
-                Path = Path
-            };
+            _TaskScan = new TaskScanModel(Path);
             // Результат.
             return _TaskScan;
         }
         /// <summary>
+        /// Сканировать файлы.
+        /// </summary>
+        /// <param name="path"></param>
+        public virtual void ScanFiles(FolderModel Folder)
+        {
+            Folder.Files.AddRange(Folder.Info.GetFiles());
+        }
+        /// <summary>
         /// Сканировать папки.
         /// </summary>
-        public void ScanFolders(TaskScanModel Task)
+        public virtual void ScanFolders(FolderModel Folder)
         {
-            // Список папок.
-            Task.Folder = new FolderModel(Task.Path);
+            // Для каждого дочернего каталога.
+            foreach (DirectoryInfo _Dir in Folder.Info.GetDirectories())
+            {
+                // Дочерний каталог.
+                FolderModel _Child = new FolderModel(_Dir.FullName);
+                Folder.ChildFolders.Add(_Child);
+                // Отдельный поток на скан подкаталогов.
+                ScanFolders(_Child);
+                // Отдельный поток на скан файлов.
+                ScanFiles(_Child);
+            }
         }
 
     }
