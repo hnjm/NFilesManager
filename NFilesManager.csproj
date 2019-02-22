@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Code\Models\FolderModel.cs" />
     <Compile Include="Code\Models\TaskScanModel.cs" />
+    <Compile Include="Code\Services\ServiceNetwork.cs" />
     <Compile Include="Code\Services\ServiceScanManager.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />
