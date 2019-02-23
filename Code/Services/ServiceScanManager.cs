@@ -66,6 +66,7 @@ namespace NFilesManager.Code.Services
         /// <param name="path"></param>
         public virtual void ScanFiles(FolderModel Folder)
         {
+            Folder.Files.Clear();
             Folder.Files.AddRange(Folder.Info.GetFiles());
         }
         /// <summary>
@@ -73,6 +74,7 @@ namespace NFilesManager.Code.Services
         /// </summary>
         public virtual void ScanFolders(FolderModel Folder)
         {
+            Folder.ChildFolders.Clear();
             // Для каждого дочернего каталога.
             foreach (DirectoryInfo _Dir in Folder.Info.GetDirectories())
             {

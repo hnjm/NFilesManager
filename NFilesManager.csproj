@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Code\Models\FolderModel.cs" />
     <Compile Include="Code\Models\TaskScanModel.cs" />
-    <Compile Include="Code\Services\ServiceNetwork.cs" />
+    <Compile Include="Code\Services\Network\NetworkClient.cs" />
+    <Compile Include="Code\Services\Network\NetworkServer.cs" />
+    <Compile Include="Code\Services\Network\ServiceNetwork.cs" />
     <Compile Include="Code\Services\ServiceScanManager.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />

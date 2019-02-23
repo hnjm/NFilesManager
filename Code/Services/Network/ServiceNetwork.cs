@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Sockets;
 
-namespace NFilesManager.Code.Services
+namespace NFilesManager.Code.Services.Network
 {
     /// <summary>
     /// Сервис сетевого взаимодействия.
@@ -25,9 +26,9 @@ namespace NFilesManager.Code.Services
         //----------------------------------------------
 
         /// <summary>
-        /// -
+        /// Сервер приема передачи файлов.
         /// </summary>
-
+        private NetworkServer m_Server;
 
         //--События-------------------------------------
         // --
