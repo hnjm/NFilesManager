@@ -10,7 +10,7 @@ namespace NFilesManager.Code.Services.Tests
     [TestFixture()]
     public class ServiceScanManagerTests
     {
-        private string m_Path = $@"{AppDomain.CurrentDomain.BaseDirectory}\TestFolder";
+        private string m_Path = $@"{AppDomain.CurrentDomain.BaseDirectory}\Data";
 
         [Test(Description = "Инициализация.")]
         public void ServiceScanManagerTest()
