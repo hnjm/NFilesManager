@@ -7,46 +7,28 @@ using System.Net.Sockets;
 
 namespace NFilesManager.Code.Services.Network
 {
-    /// <summary>
-    /// Клиент.
-    /// </summary>
-    public class NetworkClient
-    {
-        //--Конструкторы/инициализаторы-----------------
-        // --
-        //----------------------------------------------
+	/// <summary>
+	/// Клиент.
+	/// </summary>
+	public class NetworkClient
+	{
+		#region Конструкторы/инициализаторы
 
-        /// <summary>
-        /// -
-        /// </summary>
+		#endregion
+		
+		#region Свойства
+		/// <summary>
+		/// TCP сервер.
+		/// </summary>
+		TcpClient m_Server;
+		#endregion
 
+		#region События
 
-        //--Свойства------------------------------------
-        // --
-        //----------------------------------------------
+		#endregion
 
-        /// <summary>
-        /// TCP сервер.
-        /// </summary>
-        TcpClient m_Server;
+		#region Методы
 
-        //--События-------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-
-
-        //--Методы--------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-
-
-    }
+		#endregion
+	}
 }

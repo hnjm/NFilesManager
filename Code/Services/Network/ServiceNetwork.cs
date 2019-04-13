@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using System.Windows.Forms;
+using NFilesManager.Code.Models;
 
 namespace NFilesManager.Code.Services.Network
 {
@@ -17,8 +19,12 @@ namespace NFilesManager.Code.Services.Network
 		//----------------------------------------------
 
 		/// <summary>
-		/// -
+		/// Сервис сетевого взаимодействия.
 		/// </summary>
+		public ServiceNetwork()
+		{
+			m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000};
+		}
 
 
 		//--Свойства------------------------------------
@@ -29,6 +35,15 @@ namespace NFilesManager.Code.Services.Network
 		/// Сервер приема передачи файлов.
 		/// </summary>
 		private NetworkServer m_Server;
+		/// <summary>
+		/// Настройки сервера.
+		/// </summary>
+		private SettingsNetworkModel m_SettingsServer;
+		/// <summary>
+		/// Настройки клиента.
+		/// </summary>
+		private SettingsNetworkModel m_SettingsClient;
+
 
 		//--События-------------------------------------
 		// --
@@ -48,8 +63,9 @@ namespace NFilesManager.Code.Services.Network
 		/// </summary>
 		public void StartServer()
 		{
+			if (m_SettingsServer == null) throw Exception("");
 			if (m_Server != null) m_Server = new NetworkServer();
-
+			m_Server.Start();
 		}
 	}
 }
