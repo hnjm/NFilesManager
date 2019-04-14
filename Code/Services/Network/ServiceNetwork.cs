@@ -25,6 +25,13 @@ namespace NFilesManager.Code.Services.Network
 		{
 			m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000};
 		}
+		/// <summary>
+		/// Сервис сетевого взаимодействия.
+		/// </summary>
+		public ServiceNetwork(SettingsNetworkModel SettingsServer)
+		{
+			m_SettingsServer = SettingsServer;
+		}
 
 
 		//--Свойства------------------------------------

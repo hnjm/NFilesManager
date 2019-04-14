@@ -7,49 +7,31 @@ using System.Windows.Forms;
 
 namespace NFilesManager.Code
 {
-    class Start
-    {
-        //--Конструкторы/инициализаторы-----------------
-        // --
-        //----------------------------------------------
+	class Start
+	{
+		#region Конструкторы/инициализаторы
 
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
+		#endregion
 
-        //--Свойства------------------------------------
-        // --
-        //----------------------------------------------
+		#region Свойства
 
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
+		#endregion
 
-        //--События-------------------------------------
-        // --
-        //----------------------------------------------
+		#region События
 
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
+		#endregion
 
-        //--Методы--------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
-        }
-    }
+		#region Методы
+		/// <summary>
+		/// Точка входа приложения.
+		/// </summary>
+		[STAThread]
+		static void Main()
+		{
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run();
+		}
+	}
+	#endregion
 }
