@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net;
+using NFilesManager.Code.Models;
 
 namespace NFilesManager.Code.Services.Network
 {
     /// <summary>
     /// Клиент.
     /// </summary>
-    public class NetworkClient
+    class NetworkClient: INetworkClient
     {
         #region Конструкторы/инициализаторы
         /// <summary>
@@ -25,9 +26,14 @@ namespace NFilesManager.Code.Services.Network
 
         #region Свойства
         /// <summary>
+        /// Состояние подключения.
+        /// </summary>
+        public bool Connected { get { return m_Client.Connected; } }
+
+        /// <summary>
         /// TCP сервер.
         /// </summary>
-        TcpClient m_Client;
+        private TcpClient m_Client;
         #endregion
 
         #region События
@@ -37,19 +43,20 @@ namespace NFilesManager.Code.Services.Network
         /// <summary>
         /// Подключиться к серверу.
         /// </summary>
-        public void Connect()
+        public void Connect(string Hostname, int Port)
         {
-            // -
+            // Закрыть предыдущее подключение.
             if (m_Client.Connected) m_Client.Close();
-            // -
-            IPAddress _IPAddress;
-            int _Port;
-            // -
-            IPEndPoint _IPEndPoint = new IPEndPoint();
-            // -
-            string _Hostname;
-            // -
-            m_Client.Connect(;
+            // Создать новое подключение.
+            m_Client = new TcpClient();
+            m_Client.Connect(Hostname, Port);
+        }
+        /// <summary>
+        /// Закрыть подключение.
+        /// </summary>
+        public void Close()
+        {
+            m_Client.Close();
         }
         #endregion
     }

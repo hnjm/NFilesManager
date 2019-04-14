@@ -21,6 +21,7 @@ namespace NFilesManager.Code.Services.Network
         public ServiceNetwork()
         {
             m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000 };
+            m_Clients = new List<NetworkClient>();
         }
         /// <summary>
         /// Сервис сетевого взаимодействия.
@@ -28,6 +29,7 @@ namespace NFilesManager.Code.Services.Network
         public ServiceNetwork(SettingsNetworkModel SettingsServer)
         {
             m_SettingsServer = SettingsServer;
+            m_Clients = new List<NetworkClient>();
         }
         #endregion
 
@@ -41,9 +43,9 @@ namespace NFilesManager.Code.Services.Network
         /// </summary>
         private SettingsNetworkModel m_SettingsServer;
         /// <summary>
-        /// Настройки клиента.
+        /// Подключения к клиентам.
         /// </summary>
-        private SettingsNetworkModel m_SettingsClient;
+        private List<NetworkClient> m_Clients;
         #endregion
 
         #region События
@@ -64,6 +66,22 @@ namespace NFilesManager.Code.Services.Network
         public void StopServer()
         {
             m_Server.Stop();
+        }
+        /// <summary>
+        /// Создать подключение к клиенту.
+        /// </summary>
+        /// <param name="Hostname">Хост клиента.</param>
+        /// <param name="Port">Порт.</param>
+        public INetworkClient Connect(string Hostname, int Port)
+        {
+            // Создать клиент.
+            NetworkClient _Client = new NetworkClient();
+            // Выполнить подключение.
+            _Client.Connect(Hostname, Port);
+            // Добавить подключение в список.
+            m_Clients.Add(_Client);
+            // -
+            return _Client;
         }
         #endregion
     }
