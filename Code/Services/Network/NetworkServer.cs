@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using NFilesManager.Code.Models;
 
 namespace NFilesManager.Code.Services.Network
 {
@@ -13,37 +14,29 @@ namespace NFilesManager.Code.Services.Network
 	/// </summary>
 	public class NetworkServer
 	{
-		//--Конструкторы/инициализаторы-----------------
-		// --
-		//----------------------------------------------
+		#region Конструкторы/инициализаторы
 
-		/// <summary>
-		/// -
-		/// </summary>
+		#endregion
 
-
-		//--Свойства------------------------------------
-		// --
-		//----------------------------------------------
-
+		#region Свойства
 		/// <summary>
 		/// TCP сервер.
 		/// </summary>
 		TcpListener m_Server;
+		#endregion
 
-		//--События-------------------------------------
-		// --
-		//----------------------------------------------
+		#region События
 
+		#endregion
+
+		#region Методы
 		/// <summary>
-		/// -
+		/// 
 		/// </summary>
-
-
-		//--Методы--------------------------------------
-		// --
-		//----------------------------------------------
-
+		public void Start(SettingsNetworkModel Settings)
+		{
+			Start(IP: Settings.IP, Port: Settings.Port);
+		}
 		/// <summary>
 		/// Запустить сервер.
 		/// </summary>
@@ -60,5 +53,6 @@ namespace NFilesManager.Code.Services.Network
 		/// Остановить сервер.
 		/// </summary>
 		public void Stop() { m_Server.Stop(); }
+		#endregion
 	}
 }

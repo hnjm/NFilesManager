@@ -62,10 +62,9 @@ namespace NFilesManager.Code.Services.Network
 		/// Запустить сервер.
 		/// </summary>
 		public void StartServer()
-		{
-			if (m_SettingsServer == null) throw Exception("");
+		{			
 			if (m_Server != null) m_Server = new NetworkServer();
-			m_Server.Start();
+			m_Server.Start(m_SettingsServer);
 		}
 	}
 }
