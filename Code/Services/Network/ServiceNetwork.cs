@@ -14,64 +14,57 @@ namespace NFilesManager.Code.Services.Network
 	/// </summary>
 	public class ServiceNetwork
 	{
-		//--Конструкторы/инициализаторы-----------------
-		// --
-		//----------------------------------------------
+        #region Конструкторы/инициализаторы
+        /// <summary>
+        /// Сервис сетевого взаимодействия.
+        /// </summary>
+        public ServiceNetwork()
+        {
+            m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000 };
+        }
+        /// <summary>
+        /// Сервис сетевого взаимодействия.
+        /// </summary>
+        public ServiceNetwork(SettingsNetworkModel SettingsServer)
+        {
+            m_SettingsServer = SettingsServer;
+        }
+        #endregion
 
-		/// <summary>
-		/// Сервис сетевого взаимодействия.
-		/// </summary>
-		public ServiceNetwork()
-		{
-			m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000};
-		}
-		/// <summary>
-		/// Сервис сетевого взаимодействия.
-		/// </summary>
-		public ServiceNetwork(SettingsNetworkModel SettingsServer)
-		{
-			m_SettingsServer = SettingsServer;
-		}
+        #region Свойства
+        /// <summary>
+        /// Сервер приема передачи файлов.
+        /// </summary>
+        private NetworkServer m_Server;
+        /// <summary>
+        /// Настройки сервера.
+        /// </summary>
+        private SettingsNetworkModel m_SettingsServer;
+        /// <summary>
+        /// Настройки клиента.
+        /// </summary>
+        private SettingsNetworkModel m_SettingsClient;
+        #endregion
 
+        #region События
+        #endregion
 
-		//--Свойства------------------------------------
-		// --
-		//----------------------------------------------
-
-		/// <summary>
-		/// Сервер приема передачи файлов.
-		/// </summary>
-		private NetworkServer m_Server;
-		/// <summary>
-		/// Настройки сервера.
-		/// </summary>
-		private SettingsNetworkModel m_SettingsServer;
-		/// <summary>
-		/// Настройки клиента.
-		/// </summary>
-		private SettingsNetworkModel m_SettingsClient;
-
-
-		//--События-------------------------------------
-		// --
-		//----------------------------------------------
-
-		/// <summary>
-		/// -
-		/// </summary>
-
-
-		//--Методы--------------------------------------
-		// --
-		//----------------------------------------------
-
-		/// <summary>
-		/// Запустить сервер.
-		/// </summary>
-		public void StartServer()
-		{			
-			if (m_Server != null) m_Server = new NetworkServer();
-			m_Server.Start(m_SettingsServer);
-		}
-	}
+        #region Методы
+        /// <summary>
+        /// Запустить сервер.
+        /// </summary>
+        public void StartServer()
+        {
+            if (m_Server != null) m_Server = new NetworkServer();
+            m_Server.Start(m_SettingsServer);
+        }
+        /// <summary>
+        /// Остановить сервер.
+        /// </summary>
+        public void StopServer()
+        {
+            m_Server.Stop();
+        }
+        #endregion
+    }
 }
