@@ -6,48 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace NFilesManager.Code.Services
+namespace NFilesManager.Code.Services.Scan
 {
     /// <summary>
     /// Менеджер сканирования.
     /// </summary>
     public class ServiceScanManager
     {
+        #region Конструкторы/инициализаторы
+        #endregion
 
+        #region Свойства
+        #endregion
 
-        //--Конструкторы/инициализаторы-----------------
-        // --
-        //----------------------------------------------
+        #region События
+        #endregion
 
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
-
-
-        //--Свойства------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// --
-        /// </summary>
-        
-
-        //--События-------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// --
-        /// </summary>
-        /// 
-
-
-        //--Методы--------------------------------------
-        // --
-        //----------------------------------------------
-
+        #region Методы
         /// <summary>
         /// Создать задачу сканирования.
         /// </summary>
@@ -87,6 +62,6 @@ namespace NFilesManager.Code.Services
                 ScanFiles(_Child);
             }
         }
-
+        #endregion
     }
 }

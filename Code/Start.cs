@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NFilesManager.Code.Controllers;
 
 namespace NFilesManager.Code
 {
@@ -14,7 +15,6 @@ namespace NFilesManager.Code
 		#endregion
 
 		#region Свойства
-
 		#endregion
 
 		#region События
@@ -28,9 +28,12 @@ namespace NFilesManager.Code
 		[STAThread]
 		static void Main()
 		{
+            // -
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run();
+            // -
+            GeneralController _Controller = new GeneralController();
+			Application.Run(_Controller.Form);
 		}
 	}
 	#endregion

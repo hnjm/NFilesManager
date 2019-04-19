@@ -41,11 +41,11 @@ namespace NFilesManager.Code.Services.Network
         /// <summary>
         /// Настройки сервера.
         /// </summary>
-        private SettingsNetworkModel m_SettingsServer;
+        private readonly SettingsNetworkModel m_SettingsServer;
         /// <summary>
         /// Подключения к клиентам.
         /// </summary>
-        private List<NetworkClient> m_Clients;
+        private readonly List<NetworkClient> m_Clients;
         #endregion
 
         #region События

@@ -40,9 +40,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Code\Interfaces\" />
+    <EmbeddedResource Include="Code\Interfaces\General.resx">
+      <DependentUpon>General.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Controllers\GeneralController.cs" />
+    <Compile Include="Code\Interfaces\General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Interfaces\General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
+    </Compile>
     <Compile Include="Code\Models\FolderModel.cs" />
     <Compile Include="Code\Models\SettingsNetworkModel.cs" />
     <Compile Include="Code\Models\TaskScanModel.cs" />
@@ -50,15 +59,18 @@
     <Compile Include="Code\Services\Network\NetworkClient.cs" />
     <Compile Include="Code\Services\Network\NetworkServer.cs" />
     <Compile Include="Code\Services\Network\ServiceNetwork.cs" />
-    <Compile Include="Code\Services\ServiceScanManager.cs" />
+    <Compile Include="Code\Services\Scan\ServiceScanManager.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

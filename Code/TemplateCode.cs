@@ -1,11 +1,11 @@
-﻿#region Конструкторы/инициализаторы
+﻿#region Конструкторы/инициализаторы.
 #endregion
 
-#region Свойства
+#region Свойства.
 #endregion
 
-#region События
+#region События.
 #endregion
 
-#region Методы
+#region Методы.
 #endregion
