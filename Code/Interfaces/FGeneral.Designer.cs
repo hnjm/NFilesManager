@@ -1,6 +1,6 @@
 ﻿namespace NFilesManager.Code.Interfaces
 {
-    partial class General
+    partial class FGeneral
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,9 @@
             this.ButtonScanFolder.Name = "ButtonScanFolder";
             this.ButtonScanFolder.Size = new System.Drawing.Size(122, 23);
             this.ButtonScanFolder.TabIndex = 0;
-            this.ButtonScanFolder.Text = "Сканировать папку";
+            this.ButtonScanFolder.Text = "Сканировать";
             this.ButtonScanFolder.UseVisualStyleBackColor = true;
+            this.ButtonScanFolder.Click += new System.EventHandler(this.StartScan);
             // 
             // General
             // 

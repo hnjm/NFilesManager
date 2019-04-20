@@ -40,17 +40,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Code\Interfaces\General.resx">
-      <DependentUpon>General.cs</DependentUpon>
+    <EmbeddedResource Include="Code\Interfaces\FGeneral.resx">
+      <DependentUpon>FGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Interfaces\FScan.resx">
+      <DependentUpon>FScan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Controllers\GeneralController.cs" />
-    <Compile Include="Code\Interfaces\General.cs">
+    <Compile Include="Code\Interfaces\FGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Interfaces\General.Designer.cs">
-      <DependentUpon>General.cs</DependentUpon>
+    <Compile Include="Code\Interfaces\FGeneral.Designer.cs">
+      <DependentUpon>FGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Interfaces\FScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Interfaces\FScan.Designer.cs">
+      <DependentUpon>FScan.cs</DependentUpon>
     </Compile>
     <Compile Include="Code\Models\FolderModel.cs" />
     <Compile Include="Code\Models\SettingsNetworkModel.cs" />

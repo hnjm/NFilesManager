@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NFilesManager.Code.Interfaces;
 
-namespace NFilesManager.Code.Controllers
+namespace NFilesManager.Code.Interfaces
 {
     /// <summary>
-    /// Основной контроллер.
+    /// Форма сканирования.
     /// </summary>
-    public class GeneralController
+    public partial class FScan : Form
     {
         #region Конструкторы/инициализаторы.
         /// <summary>
-        /// Создать контроллер.
+        /// Создать форму сканирования.
         /// </summary>
-        public GeneralController()
+        public FScan()
         {
-            Form = new FGeneral();
+            InitializeComponent();
         }
         #endregion
 
         #region Свойства.
         /// <summary>
-        /// Форма.
+        /// Путь сканирования.
         /// </summary>
-        public Form Form { get; }
+        internal string ScanPath { get { return TextBoxSanPath.Text; } set { TextBoxSanPath.Text = value; } }
         #endregion
 
         #region События.
