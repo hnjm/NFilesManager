@@ -33,9 +33,40 @@ namespace NFilesManager.Code.Interfaces
         #endregion
 
         #region События.
+        /// <summary>
+        /// Событие запустить сканирование.
+        /// </summary>
+        internal EventHandler<string> EventScan => EventScan;
+        /// <summary>
+        /// Событие выбрать клиента.
+        /// </summary>
+        internal EventHandler EventConnectToClient => EventConnectToClient;
+        /// <summary>
+        /// Событие отправить файлы.
+        /// </summary>
+        internal EventHandler EventSendFiles => EventSendFiles;
+        /// <summary>
+        /// Событие отобразить информацию о клиенте.
+        /// </summary>
+        internal EventHandler EventViewInfoClient => EventViewInfoClient;
         #endregion
 
         #region Методы.
+        /// <summary>
+        /// Начать сканирование.
+        /// </summary>
+        /// <param name="Obj"></param>
+        /// <param name="Args"></param>
+        private void StartScan(object Obj, EventArgs Args)
+        {
+            EventScan?.Invoke(this, ScanPath);
+        }
+        /// <summary>
+        /// Выбрать клиента.
+        /// </summary>
+        /// <param name="Obj"></param>
+        /// <param name="Args"></param>
+        private void ConnectToClient(object Obj, EventArgs Args) { }
         #endregion
     }
 }
