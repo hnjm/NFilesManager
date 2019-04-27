@@ -1,7 +1,7 @@
 ﻿#region Конструкторы/инициализаторы.
 #endregion
 
-#region Свойства.
+#region Свойства/Поля.
 #endregion
 
 #region События.

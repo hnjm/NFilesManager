@@ -40,35 +40,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Code\Interfaces\FGeneral.resx">
+    <EmbeddedResource Include="Code\Modules\ModulGeneral\FGeneral.resx">
       <DependentUpon>FGeneral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Code\Interfaces\FScan.resx">
+    <EmbeddedResource Include="Code\Modules\ModulScan\FScan.resx">
       <DependentUpon>FScan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Controllers\GeneralController.cs" />
-    <Compile Include="Code\Interfaces\FGeneral.cs">
+    <Compile Include="Code\Modules\Constructor.cs" />
+    <Compile Include="Code\Modules\ModulGeneral\GeneralController.cs" />
+    <Compile Include="Code\Modules\ModulGeneral\FGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Interfaces\FGeneral.Designer.cs">
+    <Compile Include="Code\Modules\ModulGeneral\FGeneral.Designer.cs">
       <DependentUpon>FGeneral.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\Interfaces\FScan.cs">
+    <Compile Include="Code\Modules\ModulGeneral\IModulGeneral.cs" />
+    <Compile Include="Code\Modules\ModulScan\FScan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Interfaces\FScan.Designer.cs">
+    <Compile Include="Code\Modules\ModulScan\FScan.Designer.cs">
       <DependentUpon>FScan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\Models\FolderModel.cs" />
-    <Compile Include="Code\Models\SettingsNetworkModel.cs" />
-    <Compile Include="Code\Models\TaskScanModel.cs" />
-    <Compile Include="Code\Services\Network\INetworkClient.cs" />
-    <Compile Include="Code\Services\Network\NetworkClient.cs" />
-    <Compile Include="Code\Services\Network\NetworkServer.cs" />
-    <Compile Include="Code\Services\Network\ServiceNetwork.cs" />
-    <Compile Include="Code\Services\Scan\ServiceScanManager.cs" />
+    <Compile Include="Code\Modules\ModulScan\FolderModel.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\SettingsNetworkModel.cs" />
+    <Compile Include="Code\Modules\ModulScan\TaskScanModel.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\INetworkClient.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\NetworkClient.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\NetworkServer.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\ServiceNetwork.cs" />
+    <Compile Include="Code\Modules\ModulScan\ServiceScanManager.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,5 +83,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

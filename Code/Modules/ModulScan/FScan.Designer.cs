@@ -1,4 +1,4 @@
-﻿namespace NFilesManager.Code.Interfaces
+﻿namespace NFilesManager.Code.Modules.ModulScan
 {
     partial class FScan
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace NFilesManager.Code.Models
+namespace NFilesManager.Code.Modules.ModulScan
 {
     /// <summary>
     /// Задача сканирования.

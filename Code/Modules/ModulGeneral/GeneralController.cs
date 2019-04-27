@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NFilesManager.Code.Interfaces;
 
-namespace NFilesManager.Code.Controllers
+namespace NFilesManager.Code.Modules.ModulGeneral
 {
     /// <summary>
     /// Основной контроллер.
     /// </summary>
-    public class GeneralController
+    public class GeneralController : IModulGeneral
     {
         #region Конструкторы/инициализаторы.
         /// <summary>
@@ -19,7 +18,8 @@ namespace NFilesManager.Code.Controllers
         /// </summary>
         public GeneralController()
         {
-            Form = new FGeneral();
+            _Form = new FGeneral();
+            _Form.EventScan += Scan;
         }
         #endregion
 
@@ -27,13 +27,24 @@ namespace NFilesManager.Code.Controllers
         /// <summary>
         /// Форма.
         /// </summary>
-        public Form Form { get; }
+        public Form Form { get { return _Form; } }
+
+        /// <summary>
+        /// Форма.
+        /// </summary>
+        private FGeneral _Form;
         #endregion
 
         #region События.
         #endregion
 
         #region Методы.
+        /// <summary>
+        /// Сканировать.
+        /// </summary>
+        /// <param name="Obj"></param>
+        /// <param name="Path"></param>
+        private void Scan(object Obj, string Path) { }
         #endregion
     }
 }

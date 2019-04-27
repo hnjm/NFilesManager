@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NFilesManager.Code.Modules;
+using System;
 using System.Windows.Forms;
-using NFilesManager.Code.Controllers;
 
 namespace NFilesManager.Code
 {
-	class Start
+    class Start
 	{
 		#region Конструкторы/инициализаторы
-
 		#endregion
 
 		#region Свойства
 		#endregion
 
 		#region События
-
 		#endregion
 
 		#region Методы
@@ -32,9 +26,9 @@ namespace NFilesManager.Code
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
             // -
-            GeneralController _Controller = new GeneralController();
-			Application.Run(_Controller.Form);
+            var ModulGeneral = Constructor.CreateModulGeneral();
+			Application.Run(ModulGeneral.Form);
 		}
-	}
-	#endregion
+        #endregion
+    }
 }

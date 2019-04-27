@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NFilesManager.Code.Interfaces
+namespace NFilesManager.Code.Modules.ModulScan
 {
     /// <summary>
     /// Форма сканирования.

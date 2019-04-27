@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NFilesManager.Code.Interfaces
+namespace NFilesManager.Code.Modules.ModulGeneral
 {
     /// <summary>
     /// Главная форма.
@@ -32,7 +32,7 @@ namespace NFilesManager.Code.Interfaces
         /// <summary>
         /// Событие запустить сканирование.
         /// </summary>
-        internal EventHandler<string> EventScan => EventScan;
+        internal EventHandler<string> EventScan { get; set; }
         #endregion
 
         #region Методы.
