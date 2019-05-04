@@ -12,13 +12,13 @@ namespace NFilesManager.Code.Services.Network
 	/// <summary>
 	/// Сервис сетевого взаимодействия.
 	/// </summary>
-	public class ServiceNetwork
+	public class NetworkController
 	{
         #region Конструкторы/инициализаторы
         /// <summary>
         /// Сервис сетевого взаимодействия.
         /// </summary>
-        public ServiceNetwork()
+        public NetworkController()
         {
             m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000 };
             m_Clients = new List<NetworkClient>();
@@ -26,7 +26,7 @@ namespace NFilesManager.Code.Services.Network
         /// <summary>
         /// Сервис сетевого взаимодействия.
         /// </summary>
-        public ServiceNetwork(SettingsNetworkModel SettingsServer)
+        public NetworkController(SettingsNetworkModel SettingsServer)
         {
             m_SettingsServer = SettingsServer;
             m_Clients = new List<NetworkClient>();

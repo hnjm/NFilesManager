@@ -69,7 +69,7 @@
     <Compile Include="Code\Modules\ModulNetwork\INetworkClient.cs" />
     <Compile Include="Code\Modules\ModulNetwork\NetworkClient.cs" />
     <Compile Include="Code\Modules\ModulNetwork\NetworkServer.cs" />
-    <Compile Include="Code\Modules\ModulNetwork\ServiceNetwork.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\NetworkController.cs" />
     <Compile Include="Code\Modules\ModulScan\ServiceScanManager.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />

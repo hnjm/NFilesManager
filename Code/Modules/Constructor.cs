@@ -28,7 +28,8 @@ namespace NFilesManager.Code.Modules
         /// <returns></returns>
         public static IModulGeneral CreateModulGeneral()
         {
-            return null;
+            IModulGeneral _Modul = new GeneralController();
+            return _Modul;
         }
         #endregion
     }
