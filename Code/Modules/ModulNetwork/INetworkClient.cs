@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFilesManager.Code.Services.Network
+namespace NFilesManager.Code.Modules.ModulNetwork
 {
     public interface INetworkClient
     {

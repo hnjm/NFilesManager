@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net;
 using NFilesManager.Code.Models;
+using NFilesManager.Code.Modules.ModulGeneral;
 
-namespace NFilesManager.Code.Services.Network
+namespace NFilesManager.Code.Modules.ModulNetwork
 {
     /// <summary>
     /// Клиент.

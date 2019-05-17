@@ -1,24 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using NFilesManager.Code.Modules.ModulScan;
 
 namespace NFilesManager.Code.Modules.ModulGeneral
 {
     /// <summary>
     /// Основной контроллер.
     /// </summary>
-    public class GeneralController : IModulGeneral
+    public class GeneralCore : IModulGeneral
     {
         #region Конструкторы/инициализаторы.
         /// <summary>
+        /// Инициализация объекта.
+        /// </summary>
+        /// <returns></returns>
+        public static IModulGeneral Instance()
+        {
+            return new GeneralCore();
+        }
+
+        /// <summary>
         /// Создать контроллер.
         /// </summary>
-        public GeneralController()
+        private GeneralCore()
         {
-            _Form = new FGeneral();
+            _Form = new GeneralCoreForm();
             _Form.EventScan += Scan;
         }
         #endregion
@@ -32,7 +37,7 @@ namespace NFilesManager.Code.Modules.ModulGeneral
         /// <summary>
         /// Форма.
         /// </summary>
-        private FGeneral _Form;
+        private GeneralCoreForm _Form;
         #endregion
 
         #region События.
@@ -44,7 +49,10 @@ namespace NFilesManager.Code.Modules.ModulGeneral
         /// </summary>
         /// <param name="Obj"></param>
         /// <param name="Path"></param>
-        private void Scan(object Obj, string Path) { }
+        private void Scan(object Obj, string Path)
+        {
+            
+        }
         #endregion
     }
 }

@@ -40,37 +40,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Code\Modules\ModulGeneral\FGeneral.resx">
-      <DependentUpon>FGeneral.cs</DependentUpon>
+    <EmbeddedResource Include="Code\Modules\ModulGeneral\GeneralCoreForm.resx">
+      <DependentUpon>GeneralCoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Code\Modules\ModulScan\FScan.resx">
-      <DependentUpon>FScan.cs</DependentUpon>
+    <EmbeddedResource Include="Code\Modules\ModulScan\ScanCoreForm.resx">
+      <DependentUpon>ScanCoreForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Modules\Constructor.cs" />
-    <Compile Include="Code\Modules\ModulGeneral\GeneralController.cs" />
-    <Compile Include="Code\Modules\ModulGeneral\FGeneral.cs">
+    <Compile Include="Code\Modules\ModulesConstructor.cs" />
+    <Compile Include="Code\Modules\ModulGeneral\GeneralCore.cs" />
+    <Compile Include="Code\Modules\ModulGeneral\GeneralCoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Modules\ModulGeneral\FGeneral.Designer.cs">
-      <DependentUpon>FGeneral.cs</DependentUpon>
+    <Compile Include="Code\Modules\ModulGeneral\GeneralCoreForm.Designer.cs">
+      <DependentUpon>GeneralCoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Code\Modules\ModulGeneral\IModulGeneral.cs" />
-    <Compile Include="Code\Modules\ModulScan\FScan.cs">
+    <Compile Include="Code\Modules\ModulNetwork\IModulNetwork.cs" />
+    <Compile Include="Code\Modules\ModulScan\ScanCoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Modules\ModulScan\FScan.Designer.cs">
-      <DependentUpon>FScan.cs</DependentUpon>
+    <Compile Include="Code\Modules\ModulScan\ScanCoreForm.Designer.cs">
+      <DependentUpon>ScanCoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\Modules\ModulScan\FolderModel.cs" />
+    <Compile Include="Code\Modules\ModulScan\ModelFolder.cs" />
     <Compile Include="Code\Modules\ModulNetwork\SettingsNetworkModel.cs" />
-    <Compile Include="Code\Modules\ModulScan\TaskScanModel.cs" />
+    <Compile Include="Code\Modules\ModulScan\ModelTaskScan.cs" />
     <Compile Include="Code\Modules\ModulNetwork\INetworkClient.cs" />
     <Compile Include="Code\Modules\ModulNetwork\NetworkClient.cs" />
     <Compile Include="Code\Modules\ModulNetwork\NetworkServer.cs" />
-    <Compile Include="Code\Modules\ModulNetwork\NetworkController.cs" />
-    <Compile Include="Code\Modules\ModulScan\ServiceScanManager.cs" />
+    <Compile Include="Code\Modules\ModulNetwork\NetworkCore.cs" />
+    <Compile Include="Code\Modules\ModulScan\ScanCore.cs" />
     <Compile Include="Code\Start.cs" />
     <Compile Include="Code\TemplateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

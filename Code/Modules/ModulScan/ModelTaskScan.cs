@@ -10,7 +10,7 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// <summary>
     /// Задача сканирования.
     /// </summary>
-    public class TaskScanModel
+    public class ModelTaskScan
     {
         //--Конструкторы/инициализаторы-----------------
         // --
@@ -19,10 +19,10 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// -
         /// </summary>
-        public TaskScanModel(string Path)
+        public ModelTaskScan(string Path)
         {
             this.Path = Path;
-            Folder = new FolderModel(Path);
+            Folder = new ModelFolder(Path);
         }
 
 
@@ -37,7 +37,7 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// Директориии.
         /// </summary>
-        public FolderModel Folder { get; set; }
+        public ModelFolder Folder { get; set; }
 
 
         //--События-------------------------------------

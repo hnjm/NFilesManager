@@ -13,13 +13,13 @@ namespace NFilesManager.Code.Modules.ModulGeneral
     /// <summary>
     /// Главная форма.
     /// </summary>
-    public partial class FGeneral : Form
+    public partial class GeneralCoreForm : Form
     {
         #region Конструкторы/инициализаторы.
         /// <summary>
         /// Создать форму.
         /// </summary>
-        public FGeneral()
+        public GeneralCoreForm()
         {
             InitializeComponent();
         }

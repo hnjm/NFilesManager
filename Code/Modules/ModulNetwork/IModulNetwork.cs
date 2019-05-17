@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace NFilesManager.Code.Modules.ModulNetwork
 {
-	/// <summary>
-	/// Настройка сети.
-	/// </summary>
-	public class SettingsNetworkModel
-	{
-		public string IP { get; set; }
-		public int Port { get; set; }
-	}
+    public interface IModulNetwork
+    {
+    }
 }

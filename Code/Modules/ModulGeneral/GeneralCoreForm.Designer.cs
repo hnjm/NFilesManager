@@ -1,6 +1,6 @@
 ﻿namespace NFilesManager.Code.Modules.ModulGeneral
 {
-    partial class FGeneral
+    partial class GeneralCoreForm
     {
         /// <summary>
         /// Required designer variable.

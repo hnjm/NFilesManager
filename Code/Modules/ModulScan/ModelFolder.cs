@@ -10,7 +10,7 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// <summary>
     /// Модель отсканированной директории.
     /// </summary>
-    public class FolderModel
+    public class ModelFolder
     {
         //--Конструкторы/инициализаторы-----------------
         // --
@@ -19,10 +19,10 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// Модель отсканированной директории.
         /// </summary>
-        public FolderModel(string Path)
+        public ModelFolder(string Path)
         {
             Files = new List<FileInfo>();
-            ChildFolders = new List<FolderModel>();
+            ChildFolders = new List<ModelFolder>();
             this.Path = Path;
             Info = new DirectoryInfo(Path);
         }
@@ -42,7 +42,7 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// Подчиненные каталоги.
         /// </summary>
-        public List<FolderModel> ChildFolders { get; }
+        public List<ModelFolder> ChildFolders { get; }
         /// <summary>
         /// Файлы.
         /// </summary>

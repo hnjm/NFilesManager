@@ -26,7 +26,7 @@ namespace NFilesManager.Code
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
             // -
-            var ModulGeneral = Constructor.CreateModulGeneral();
+            var ModulGeneral = ModulesConstructor.CreateModulGeneral();
 			Application.Run(ModulGeneral.Form);
 		}
         #endregion

@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NFilesManager.Code.Modules.ModulGeneral;
+using NFilesManager.Code.Modules.ModulNetwork;
 
 namespace NFilesManager.Code.Modules
 {
     /// <summary>
     /// Конструктор модулей.
     /// </summary>
-    public static class Constructor
+    public static class ModulesConstructor
     {
         #region Конструкторы/инициализаторы.
         #endregion
@@ -28,7 +29,16 @@ namespace NFilesManager.Code.Modules
         /// <returns></returns>
         public static IModulGeneral CreateModulGeneral()
         {
-            IModulGeneral _Modul = new GeneralController();
+            var _Modul = GeneralCore.Instance();
+            return _Modul;
+        }
+        /// <summary>
+        /// Создать модуль сетевого подключения.
+        /// </summary>
+        /// <returns></returns>
+        public static IModulNetwork CreateModulNetwork(SettingsNetworkModel Settings = null)
+        {
+            var _Modul = NetworkCore.Instance();
             return _Modul;
         }
         #endregion

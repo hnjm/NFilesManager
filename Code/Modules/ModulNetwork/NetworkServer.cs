@@ -7,12 +7,12 @@ using System.Net;
 using System.Net.Sockets;
 using NFilesManager.Code.Models;
 
-namespace NFilesManager.Code.Services.Network
+namespace NFilesManager.Code.Modules.ModulNetwork
 {
 	/// <summary>
 	/// Сервер.
 	/// </summary>
-	public class NetworkServer
+	class NetworkServer
 	{
 		#region Конструкторы/инициализаторы
 

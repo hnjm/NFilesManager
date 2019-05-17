@@ -11,7 +11,7 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// <summary>
     /// Менеджер сканирования.
     /// </summary>
-    public class ServiceScanManager
+    public class ScanCore
     {
         #region Конструкторы/инициализаторы
         #endregion
@@ -26,12 +26,12 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// Создать задачу сканирования.
         /// </summary>
-        public virtual TaskScanModel CreateTask(string Path)
+        public virtual ModelTaskScan CreateTask(string Path)
         {
             // Задача сканирования.
-            TaskScanModel _TaskScan;
+            ModelTaskScan _TaskScan;
             // Создаем задачу.
-            _TaskScan = new TaskScanModel(Path);
+            _TaskScan = new ModelTaskScan(Path);
             // Результат.
             return _TaskScan;
         }
@@ -39,7 +39,7 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// Сканировать файлы.
         /// </summary>
         /// <param name="path"></param>
-        public virtual void ScanFiles(FolderModel Folder)
+        public virtual void ScanFiles(ModelFolder Folder)
         {
             Folder.Files.Clear();
             Folder.Files.AddRange(Folder.Info.GetFiles());
@@ -47,14 +47,14 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// <summary>
         /// Сканировать папки.
         /// </summary>
-        public virtual void ScanFolders(FolderModel Folder)
+        public virtual void ScanFolders(ModelFolder Folder)
         {
             Folder.ChildFolders.Clear();
             // Для каждого дочернего каталога.
             foreach (DirectoryInfo _Dir in Folder.Info.GetDirectories())
             {
                 // Дочерний каталог.
-                FolderModel _Child = new FolderModel(_Dir.FullName);
+                ModelFolder _Child = new ModelFolder(_Dir.FullName);
                 Folder.ChildFolders.Add(_Child);
                 // Отдельный поток на скан подкаталогов.
                 ScanFolders(_Child);

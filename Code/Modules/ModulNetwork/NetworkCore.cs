@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Sockets;
-using System.Windows.Forms;
-using NFilesManager.Code.Models;
+﻿using System.Collections.Generic;
 
-namespace NFilesManager.Code.Services.Network
+namespace NFilesManager.Code.Modules.ModulNetwork
 {
-	/// <summary>
-	/// Сервис сетевого взаимодействия.
-	/// </summary>
-	public class NetworkController
-	{
+    /// <summary>
+    /// Сервис сетевого взаимодействия.
+    /// </summary>
+    class NetworkCore : IModulNetwork
+    {
         #region Конструкторы/инициализаторы
+        public static IModulNetwork Instance(SettingsNetworkModel SettingsServer = null)
+        {
+            NetworkCore _Core = SettingsServer == null ? new NetworkCore() : new NetworkCore(SettingsServer);
+            return _Core;
+        }
+
         /// <summary>
         /// Сервис сетевого взаимодействия.
         /// </summary>
-        public NetworkController()
+        private NetworkCore()
         {
             m_SettingsServer = new SettingsNetworkModel() { IP = "127.0.0.1", Port = 4000 };
             m_Clients = new List<NetworkClient>();
@@ -26,7 +25,7 @@ namespace NFilesManager.Code.Services.Network
         /// <summary>
         /// Сервис сетевого взаимодействия.
         /// </summary>
-        public NetworkController(SettingsNetworkModel SettingsServer)
+        private NetworkCore(SettingsNetworkModel SettingsServer)
         {
             m_SettingsServer = SettingsServer;
             m_Clients = new List<NetworkClient>();
