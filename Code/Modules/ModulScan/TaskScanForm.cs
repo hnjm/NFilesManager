@@ -13,13 +13,13 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// <summary>
     /// Форма сканирования.
     /// </summary>
-    public partial class ScanCoreForm : Form
+    public partial class TaskScanForm : Form
     {
         #region Конструкторы/инициализаторы.
         /// <summary>
         /// Создать форму сканирования.
         /// </summary>
-        public ScanCoreForm()
+        public TaskScanForm()
         {
             InitializeComponent();
         }

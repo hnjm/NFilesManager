@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NFilesManager.Code.Modules.ModulGeneral;
 using NFilesManager.Code.Modules.ModulNetwork;
+using NFilesManager.Code.Modules.ModulScan;
 
 namespace NFilesManager.Code.Modules
 {
@@ -41,6 +42,11 @@ namespace NFilesManager.Code.Modules
             var _Modul = NetworkCore.Instance();
             return _Modul;
         }
+        /// <summary>
+        /// Создать модуль сканирования.
+        /// </summary>
+        /// <returns></returns>
+        public static IModulScan CreateModulScan() { return null; }
         #endregion
     }
 }

@@ -12,10 +12,6 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// </summary>
     public class ModelFolder
     {
-        //--Конструкторы/инициализаторы-----------------
-        // --
-        //----------------------------------------------
-
         /// <summary>
         /// Модель отсканированной директории.
         /// </summary>
@@ -26,10 +22,6 @@ namespace NFilesManager.Code.Modules.ModulScan
             this.Path = Path;
             Info = new DirectoryInfo(Path);
         }
-
-        //--Свойства------------------------------------
-        // --
-        //----------------------------------------------
 
         /// <summary>
         /// Путь.
@@ -67,25 +59,5 @@ namespace NFilesManager.Code.Modules.ModulScan
                 return _CountCurrend + _CountInChilds;
             }
         }
-
-        //--События-------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-        /// 
-
-        //--Методы--------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-        /// 
-
-
     }
 }

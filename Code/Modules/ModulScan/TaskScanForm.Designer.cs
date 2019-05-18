@@ -1,6 +1,6 @@
 ﻿namespace NFilesManager.Code.Modules.ModulScan
 {
-    partial class ScanCoreForm
+    partial class TaskScanForm
     {
         /// <summary>
         /// Required designer variable.

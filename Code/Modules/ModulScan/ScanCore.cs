@@ -11,7 +11,7 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// <summary>
     /// Менеджер сканирования.
     /// </summary>
-    public class ScanCore
+    class ScanCore: IModulScan
     {
         #region Конструкторы/инициализаторы
         #endregion

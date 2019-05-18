@@ -3,7 +3,7 @@
 namespace NFilesManager.Code.Modules.ModulGeneral
 {
     /// <summary>
-    /// Основной контроллер.
+    /// Главный модуль.
     /// </summary>
     public interface IModulGeneral
     {

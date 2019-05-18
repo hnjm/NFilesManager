@@ -43,8 +43,8 @@
     <EmbeddedResource Include="Code\Modules\ModulGeneral\GeneralCoreForm.resx">
       <DependentUpon>GeneralCoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Code\Modules\ModulScan\ScanCoreForm.resx">
-      <DependentUpon>ScanCoreForm.cs</DependentUpon>
+    <EmbeddedResource Include="Code\Modules\ModulScan\TaskScanForm.resx">
+      <DependentUpon>TaskScanForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -58,11 +58,12 @@
     </Compile>
     <Compile Include="Code\Modules\ModulGeneral\IModulGeneral.cs" />
     <Compile Include="Code\Modules\ModulNetwork\IModulNetwork.cs" />
-    <Compile Include="Code\Modules\ModulScan\ScanCoreForm.cs">
+    <Compile Include="Code\Modules\ModulScan\IModulScan.cs" />
+    <Compile Include="Code\Modules\ModulScan\TaskScanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Modules\ModulScan\ScanCoreForm.Designer.cs">
-      <DependentUpon>ScanCoreForm.cs</DependentUpon>
+    <Compile Include="Code\Modules\ModulScan\TaskScanForm.Designer.cs">
+      <DependentUpon>TaskScanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Code\Modules\ModulScan\ModelFolder.cs" />
     <Compile Include="Code\Modules\ModulNetwork\SettingsNetworkModel.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Code\Modules\ModulNetwork\NetworkCore.cs" />
     <Compile Include="Code\Modules\ModulScan\ScanCore.cs" />
     <Compile Include="Code\Start.cs" />
-    <Compile Include="Code\TemplateCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

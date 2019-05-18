@@ -51,7 +51,9 @@ namespace NFilesManager.Code.Modules.ModulGeneral
         /// <param name="Path"></param>
         private void Scan(object Obj, string Path)
         {
-            
+            IModulScan _Scan = ModulesConstructor.CreateModulScan();
+            _Scan.CreateTask(Path);
+            _Scan.Show();
         }
         #endregion
     }

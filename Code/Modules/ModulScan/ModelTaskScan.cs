@@ -12,10 +12,6 @@ namespace NFilesManager.Code.Modules.ModulScan
     /// </summary>
     public class ModelTaskScan
     {
-        //--Конструкторы/инициализаторы-----------------
-        // --
-        //----------------------------------------------
-
         /// <summary>
         /// -
         /// </summary>
@@ -25,11 +21,6 @@ namespace NFilesManager.Code.Modules.ModulScan
             Folder = new ModelFolder(Path);
         }
 
-
-        //--Свойства------------------------------------
-        // --
-        //----------------------------------------------
-
         /// <summary>
         /// Путь сканирования.
         /// </summary>
@@ -38,27 +29,5 @@ namespace NFilesManager.Code.Modules.ModulScan
         /// Директориии.
         /// </summary>
         public ModelFolder Folder { get; set; }
-
-
-        //--События-------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-        /// 
-
-
-        //--Методы--------------------------------------
-        // --
-        //----------------------------------------------
-
-        /// <summary>
-        /// -
-        /// </summary>
-        /// 
-
-
     }
 }
